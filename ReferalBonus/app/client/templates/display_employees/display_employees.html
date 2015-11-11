@@ -1,0 +1,28 @@
+<template name="DisplayEmployees">
+  <div class="display-employees">
+    <table>
+    	<tr>
+    		<th>Name</th>
+    		<th>Designation</th>
+    		<th>Email</th>
+    		<th>Referals</th>
+    		<th>Edit</th>
+    	</tr>
+    	{{#each employees}}
+    	<tr>
+    		<td>{{fullName}}</td>
+    		<td>{{designation}}</td>
+    		<td>{{email}}</td>
+    		<td>
+    			<ul>
+    				{{#each referals}}
+    					<li>{{fullName}} for {{appliedDesignation}} Position</li>
+    				{{/each}}
+    			</ul>
+    		</td>
+    		<td>{{#linkTo route='EditEmployee'}}<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>{{/linkTo}}</td>
+    	</tr>
+    	{{/each}}
+    </table>
+  </div>
+</template>

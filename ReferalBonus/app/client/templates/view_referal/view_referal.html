@@ -1,0 +1,83 @@
+<template name="ViewReferal">
+  <div class="view-referal">
+    <table>
+    	<tr>
+    		<th>Name</th>
+    		<td>{{fullName}}</td>
+    	</tr>
+    	<tr>
+    		<th>Contact</th>
+    		<td>{{mobileNumber}}</td>
+    	</tr>
+    	<tr>
+    		<th>Email</th>
+    		<td>{{email}}</td>
+    	</tr>
+    	<tr>
+    		<th>Age</th>
+    		<td>{{age}}</td>
+    	</tr>
+    	<tr>
+    		<th>Gender</th>
+    		<td>{{gender}}</td>
+    	</tr>
+    	<tr>
+    		<th>Experience</th>
+    		<td>{{experience}} years</td>
+    	</tr>
+    	<tr>
+    		<th>Areas Of Expertise</th>
+    		<td>
+    			<ul>
+	    			{{#each areasOfExpertise}}
+	    				<li>
+	    					{{this}}
+	    				</li>
+	    			{{/each}}
+    		</ul>
+    		</td>
+    	</tr>
+    	<tr>
+    		<th>Areas Of Knowledge</th>
+    		<td>
+    			<ul>
+	    			{{#each areasOfKnowledge}}
+	    				<li>
+	    					{{this}}
+	    				</li>
+	    			{{/each}}
+    			</ul>
+    		</td>
+    	</tr>
+    	<tr>
+    		<th>Applied Designation</th>
+    		<td>{{appliedDesignation}}</td>
+    	</tr>
+    	<tr>
+    		<th>Resume</th>
+    		<td>{{resume}}</td>
+    	</tr>
+    	<tr>
+    		<th>Referred By</th>
+    		<td>{{referredBy}}</td>
+    	</tr>
+    	<tr>
+    		<th>Assigned Interviewer</th>
+    		<td>{{assignedInterviewer}}</td>
+    	</tr>
+    	<tr>
+    		<th>Interview Date</th>
+    		<td>{{interviewDate}}</td>
+    	</tr>
+    	<tr>
+    		<th>Selected?</th>
+    		<td>{{#if selected}}Yes{{else}}No{{/if}}</td>
+    	</tr>
+    	<tr>
+    		<th>Referal Bonus Credited</th>
+    		<td>{{#if amountCredited}}Yes{{else}}No{{/if}}</td>
+    	</tr>
+    </table>
+    <a href="/editReferal/{{_id}}" class="btn btn-primary edit-btn">Edit</a>
+  </div>
+</template>

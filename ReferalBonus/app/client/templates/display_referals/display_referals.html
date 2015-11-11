@@ -1,0 +1,25 @@
+<template name="DisplayReferals">
+  <div class="display-referals">
+	<table>
+		<tr>
+			<th>Name</th>
+			<th>Applied Designation</th>
+			<th>Email</th>
+			<th>Mobile Number</th>
+			<th>View</th>
+			<th>Edit</th>
+		</tr>
+		<br>
+		{{#each referals}}
+		<tr>
+			<th>{{fullName}}</th>
+			<td>{{appliedDesignation}}</td>
+			<td>{{email}}</td>
+			<td>{{mobileNumber}}</td>
+			<th>{{#linkTo route='ViewReferal'}}<span class="glyphicon glyphicon-list" aria-hidden="true"></span>{{/linkTo}}</th>
+			<th>{{#linkTo route='EditReferal'}}<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>{{/linkTo}}</th>
+		</tr>
+		{{/each}}
+	</table>
+  </div>
+</template>
